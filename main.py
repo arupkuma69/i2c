@@ -5,7 +5,7 @@ import struct
 # I2C address of the Ublox M10 device
 UBLOX_M10_I2C_ADDRESS = 0x42  # Replace with the actual address if different
 
-# Initialize the I2C bus
+# Initialize the I2C bus1
 bus = smbus.SMBus(1)  # 1 indicates /dev/i2c-1
 
 def read_ubx_nav_pvt():
