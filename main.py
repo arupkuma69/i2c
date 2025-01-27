@@ -14,10 +14,6 @@ def read_ubx_nav_pvt():
         UBX_NAV_PVT_CLASS = 0x01
         UBX_NAV_PVT_ID = 0x07
 
-        # Request UBX-NAV-PVT message
-        request = [0xB5, 0x62, UBX_NAV_PVT_CLASS, UBX_NAV_PVT_ID, 0x00, 0x00]
-        bus.write_i2c_block_data(UBLOX_M10_I2C_ADDRESS, 0xFF, request)
-
         # Read 92 bytes from the UBX-NAV-PVT message
         data = bus.read_i2c_block_data(UBLOX_M10_I2C_ADDRESS, 0xFF, 92)
 
